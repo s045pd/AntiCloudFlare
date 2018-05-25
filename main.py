@@ -27,7 +27,7 @@ def Crack(Resp=None,Content=None,Url=None):
     Params["jschl_answer"] = execjs.eval(JSCode[-3].replace(Key3, str(StartData[Key2])))
 
     time.sleep(4)
-    return f'{urljoin(url, JQData.attr("action"))}?{"&".join([f"{k}={v}" for k,v in Params.items()])}'
+    return f'{urljoin(Url, JQData.attr("action"))}?{"&".join([f"{k}={v}" for k,v in Params.items()])}'
 
 if __name__ == '__main__':
     with open("DemoPage.html","r") as Html:
